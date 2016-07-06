@@ -33,9 +33,15 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 *.py
 *.puc
 *.un~
 =======
 *.py
 >>>>>>> fe6f1aafc9aa1ef19d398dab1049d5c71d95c357
+=======
+*.py
+*.pyc
+*.un~
+>>>>>>> da8f9eeda758cb0de2ddb3bf0fc517aee092d319
