@@ -32,6 +32,10 @@
 *.app
 
 
+<<<<<<< HEAD
 *.py
 *.puc
 *.un~
+=======
+*.py
+>>>>>>> fe6f1aafc9aa1ef19d398dab1049d5c71d95c357

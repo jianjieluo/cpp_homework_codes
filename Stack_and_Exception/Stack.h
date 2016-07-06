@@ -1,5 +1,6 @@
 #ifndef STACK_H_
 #define STACK_H_
+<<<<<<< HEAD
 #include <iostream>
 const int MAX_LEN = 5;
 
@@ -51,4 +52,17 @@ template <class T> void Stack<T>::pop() {
     throw static_cast<double>(1.0);
   stack_size--;
 }
+=======
+template <typename ElementType>
+class Stack<ElementType> {
+    public:
+        Stack<ElementType>();
+        size_type size(void) {return size_;}
+        void push(ElementType val);
+        void pop(void);
+        ElementType top(void) {return *head;}
+        
+        
+
+>>>>>>> fe6f1aafc9aa1ef19d398dab1049d5c71d95c357
 #endif
