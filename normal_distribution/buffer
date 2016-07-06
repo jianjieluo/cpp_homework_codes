@@ -1,0 +1,12 @@
+Tips(pseudo code):
+remember, you need to realize adaptor as the following way!
+# b = the digits of numeric_limits<double>
+# r = generator.max - generator.min + 1
+# log2r = log(r) / log(2)
+# k = max(1, (b + log2r - 1) / log2r)
+# sum = 0 and tmp = 1
+# loop k -> 0
+# sum += (generator.randomNumber - generator.min) * tmp
+# tmp = tmp * r
+# end loop
+# return sum / tmp
