@@ -1,6 +1,6 @@
-#include <string>
 #include <iostream>
 #include <queue>
+#include <string>
 using namespace std;
 
 typedef struct Node {
@@ -11,10 +11,6 @@ typedef struct Node {
 
 bool map[8][8];
 
-bool isValid(const Node &a) {
-  return (map[a.x][a.y] == false && a.x >= 0 && a.y >= 0 && a.x < 8 && a.y < 8);
-}
-
 void findWay(Node &vs, const Node &vd, int &l) {
   queue<Node> q;
   Node v1, v2;
@@ -24,6 +20,11 @@ void findWay(Node &vs, const Node &vd, int &l) {
   vs.d = 0;
   q.push(vs);
   map[vs.x][vs.y] = true;
+
+  auto isValid = [](const Node &a) {
+    return (map[a.x][a.y] == false && a.x >= 0 && a.y >= 0 && a.x < 8 &&
+            a.y < 8);
+  };
 
   while (!q.empty()) {
     v1 = q.front();
@@ -46,6 +47,7 @@ void findWay(Node &vs, const Node &vd, int &l) {
 int main() {
   int T;
   cin >> T;
+
   while (T--) {
     for (int i = 0; i < 8; ++i) {
       for (int j = 0; j < 8; ++j) {
@@ -68,3 +70,4 @@ int main() {
   }
   return 0;
 }
+
